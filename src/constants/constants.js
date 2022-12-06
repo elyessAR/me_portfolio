@@ -5,7 +5,7 @@ export const projects = [
     image: '/images/evenement-app.png',
     tags: ['Mongo', 'Express', 'React', 'Node', 'Redux'],
     source: 'https://github.com/elyessAR/event-planner-frontend',
-    visit: 'https://google.com',
+    visit: 'http://52.55.11.96/',
     id: 0,
   },
   {
