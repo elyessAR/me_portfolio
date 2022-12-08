@@ -4,7 +4,7 @@ export const projects = [
     description: 'Full stack Mern application that allows people from around the world to organize, and interact with other people events.',
     image: '/images/evenement-app.png',
     tags: ['Mongo', 'Express', 'React', 'Node', 'Redux', 'AWS EC2'],
-    source: 'https://github.com/elyessAR/event-planner-frontend',
+    source: 'https://github.com/elyessAR/event-planner-production',
     visit: 'http://34.224.185.196/',
     id: 0,
   },
