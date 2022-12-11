@@ -20,7 +20,7 @@ const Hero = (props) => (
       <Button onClick={() => (window.location = 'https://www.upwork.com/freelancers/~01eca81ee658286fea')}>Learn More</Button>
     </LeftSection>
     <LeftSection>
-      <img width="500px" src={'/images/portfoliohero2.jpg'} />
+      <img width="400px" src={'/images/portfoliohero2.jpg'} />
     </LeftSection>
   </Section>
 );
