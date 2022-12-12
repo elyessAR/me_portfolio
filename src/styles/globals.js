@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import { normalize } from 'styled-normalize';
+import img from '../../public/images/portfoliopic.jpg';
 
 const GlobalStyles = createGlobalStyle`
   ${normalize};
@@ -15,15 +16,25 @@ const GlobalStyles = createGlobalStyle`
 
   }
   body {
-    font-family: ${props => props.theme.fonts.main};
+    font-family: ${(props) => props.theme.fonts.main};
     font-size: 1.6rem;
-    background: ${props => props.theme.colors.background1};
-    color: ${props => props.theme.colors.primary1};
+    background-color: ${(props) => props.theme.colors.background1};
+    background: ${(props) => props.theme.colors.background1};
+    background-image: url('${img}');
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+    
+    border: none; 
+
+
+
+    color: ${(props) => props.theme.colors.primary1};
     cursor: default;
 
   }
   h1,h2,h3,h4,h5,h6,button {
-    font-family: ${props => props.theme.fonts.title};
+    font-family: ${(props) => props.theme.fonts.title};
   }
   a {
     text-decoration: none;
