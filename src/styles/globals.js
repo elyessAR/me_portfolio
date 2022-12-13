@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import { normalize } from 'styled-normalize';
-import img from '../../public/images/portfoliopic.jpg';
+import img from '../../public/images/portfoliopicture.jpg';
 
 const GlobalStyles = createGlobalStyle`
   ${normalize};
