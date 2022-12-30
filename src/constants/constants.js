@@ -1,20 +1,22 @@
 export const projects = [
   {
-    title: 'Evenement',
-    description: 'Full stack Mern application that allows people from around the world to organize, and interact with other people events.',
-    image: '/images/evenement-app.png',
-    tags: ['Mongo', 'Express', 'React', 'Node', 'Redux', 'AWS EC2'],
-    source: 'https://github.com/elyessAR/event-planner-production',
-    visit: 'http://34.224.185.196/',
+    title: "Evenement",
+    description:
+      "Full stack Mern application that allows people from around the world to organize, and interact with other people events.",
+    image: "/images/evenement-app.png",
+    tags: ["Mongo", "Express", "React", "Node", "Redux"],
+    source: "https://github.com/elyessAR/event-planner-production",
+    visit: "https://event-planner-production-pj4p.vercel.app/",
     id: 0,
   },
   {
-    title: 'Shopping Cart',
-    description: 'A React beginner friendly project, my first react personal project consists of retrieving, filtering and managing products.  ',
-    image: '/images/shopping-app-img.png',
-    tags: ['React', 'CSS'],
-    source: 'https://github.com/elyessAR/react-shopping-cart/tree/dev',
-    visit: 'https://github.com/elyessAR/react-shopping-cart/tree/dev',
+    title: "ComicFun",
+    description:
+      "ComicFun is an open source photo app that turns your profile picture into a cartoonified portrait! The app allows you to take a photo, or upload an existing image and transform it into a professional, while fun image.  ",
+    image: "/images/comicFun.png",
+    tags: ["Javascript", "Tailwind"],
+    source: "https://github.com/elyessAR/comicfun",
+    visit: "https://www.comicfun.app/",
     id: 1,
   },
   // {
@@ -38,7 +40,13 @@ export const projects = [
 ];
 
 export const TimeLineData = [
-  { year: 2019, text: 'Graduated as a software engineer from ENICarthage' },
-  { year: 2019, text: 'Worked as a freelancer on multiple projects' },
-  { year: 2021, text: 'Worked as a full-stack developer at ResQsoft Company while maintaining my freelance career' },
+  {
+    year: 2019,
+    text: "Graduated as a software engineer from ENICarthage",
+  },
+  { year: 2019, text: "Worked as a freelancer on multiple projects" },
+  {
+    year: 2021,
+    text: "Worked as a full-stack developer at ResQsoft Company while maintaining my freelance career",
+  },
 ];
