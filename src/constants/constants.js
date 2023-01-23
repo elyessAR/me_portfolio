@@ -19,15 +19,16 @@ export const projects = [
     visit: "https://www.comicfun.app/",
     id: 1,
   },
-  // {
-  //   title: 'WebRTC App',
-  //   description: "This is a code repository for the corresponding YouTube video. In this tutorial, we're going to build and deploy a React Video Chat Application using WebRTC.",
-  //     image: '/images/3.jpg',
-  //     tags: ['React', 'WebRTC'],
-  //   source: 'https://google.com',
-  //   visit: 'https://google.com',
-  //   id: 2,
-  // },
+  {
+    title: "Full Stack Image App",
+    description:
+      "This app gets image data by using Node.js from GIPHY API (gifs), PIXABAY API (images) and UNSPLASH API (images) and renders them by using React.js",
+    image: "/images/full stack image app.png",
+    tags: ["Javascript", "Tailwind"],
+    source: "https://github.com/elyessAR/fullstack-image-app",
+    visit: "https://fullstack-image-app.netlify.app/giphy",
+    id: 2,
+  },
   // {
   //   title: 'Unichat',
   //   description: "This is a code repository for the corresponding video tutorial. In this video, we will create a full Realtime Chat Application",
