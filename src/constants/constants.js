@@ -24,20 +24,20 @@ export const projects = [
     description:
       "This app gets image data by using Node.js from GIPHY API (gifs), PIXABAY API (images) and UNSPLASH API (images) and renders them by using React.js",
     image: "/images/full stack image app.png",
-    tags: ["Javascript", "Tailwind"],
+    tags: ["React", "Node js"],
     source: "https://github.com/elyessAR/fullstack-image-app",
     visit: "https://fullstack-image-app.netlify.app/giphy",
     id: 2,
   },
-  // {
-  //   title: 'Unichat',
-  //   description: "This is a code repository for the corresponding video tutorial. In this video, we will create a full Realtime Chat Application",
-  //   image: '/images/4.jpg',
-  //   tags: ['React', 'ChatEngine', 'Firebase'],
-  //   source: 'https://google.com',
-  //   visit: 'https://google.com',
-  //   id: 3,
-  // },
+  {
+    title: "ZinZen",
+    description: "Realize dreams together with this web app.",
+    image: "/images/zinzen.png",
+    tags: ["React Js", "Typescript", "Dexie"],
+    source: "https://github.com/tijlleenders/ZinZen",
+    visit: "https://zinzen.me/",
+    id: 3,
+  },
 ];
 
 export const TimeLineData = [
