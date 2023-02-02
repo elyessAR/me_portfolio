@@ -1,6 +1,6 @@
-import { createGlobalStyle } from 'styled-components';
-import { normalize } from 'styled-normalize';
-import img from '../../public/images/portfoliopicture.jpg';
+import { createGlobalStyle } from "styled-components";
+import { normalize } from "styled-normalize";
+import img from "../../public/images/portfoliopicture.jpg";
 
 const GlobalStyles = createGlobalStyle`
   ${normalize};
@@ -20,7 +20,6 @@ const GlobalStyles = createGlobalStyle`
     font-size: 1.6rem;
     background-color: ${(props) => props.theme.colors.background1};
     background: ${(props) => props.theme.colors.background1};
-    background-image: url('${img}');
     background-repeat: no-repeat;
     background-size: contain;
     
