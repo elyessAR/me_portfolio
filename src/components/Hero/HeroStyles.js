@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import styled from "styled-components";
+import Image from "next/image";
 
 export const LeftSection = styled.div`
   width: 100%;
@@ -18,11 +19,22 @@ export const LeftSection = styled.div`
   }
 `;
 
-export const Img = styled.div`
+export const StyledImage = styled(Image)`
+  border-radius: 50%;
+  object-fit: cover;
+`;
+
+export const Flexbox = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   @media ${(props) => props.theme.breakpoints.sm} {
-    width: 80%;
+    flex-direction: column;
+    text-align: center;
   }
+
   @media ${(props) => props.theme.breakpoints.md} {
-    width: 100%;
+    flex-direction: column;
+    align-items: center;
   }
 `;

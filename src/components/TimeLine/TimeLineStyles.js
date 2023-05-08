@@ -1,8 +1,8 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const CarouselContainer = styled.ul`
   max-width: 1040px;
-  background: #000000;
+  background: #390c0c;
   padding: 0rem;
   list-style: none;
   display: flex;
@@ -39,7 +39,7 @@ export const CarouselMobileScrollNode = styled.div`
 `;
 
 export const CarouselItem = styled.div`
-  background: #000000;
+  background: #390c0c;
   border-radius: 3px;
   max-width: 196px;
 
