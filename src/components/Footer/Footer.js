@@ -1,7 +1,7 @@
-import React from 'react';
-import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
+import React from "react";
+import {AiFillGithub, AiFillInstagram, AiFillLinkedin} from "react-icons/ai";
 
-import { SocialIcons } from '../Header/HeaderStyles';
+import {SocialIcons} from "../Header/HeaderStyles";
 import {
   CompanyContainer,
   FooterWrapper,
@@ -12,16 +12,12 @@ import {
   Slogan,
   SocialContainer,
   SocialIconsContainer,
-} from './FooterStyles';
+} from "./FooterStyles";
 
 const Footer = () => {
   return (
     <FooterWrapper>
       <LinkList>
-        <LinkColumn>
-          <LinkTitle>Call</LinkTitle>
-          <LinkItem href="tel:+21650660534">+21650660534</LinkItem>
-        </LinkColumn>
         <LinkColumn>
           <LinkTitle>Email</LinkTitle>
           <LinkItem href="mailto:arifa.elyes@gmail.com ">arifa.elyes@gmail.com</LinkItem>
