@@ -1,8 +1,5 @@
 const withImages = require('next-images');
 
-module.exports = {
-  ...withImages(),
-  future: {
-    webpack5: true,
-  },
-};
+module.exports = withImages({
+  // Other Next.js configurations can go here if needed
+});
