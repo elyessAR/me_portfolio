@@ -14,7 +14,7 @@ const Hero = (props) => {
         <StyledImageWrapper>
           {isLoading && <Spinner />}
           <Image
-            src="/images/portfoliopicture.jpg"
+            src="/images/portfoliopicture.png"
             alt="My Image"
             width={200}
             height={200}
