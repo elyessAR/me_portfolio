@@ -1,7 +1,7 @@
 import React from "react";
-import {AiFillGithub, AiFillInstagram, AiFillLinkedin} from "react-icons/ai";
+import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
-import {SocialIcons} from "../Header/HeaderStyles";
+import { SocialIcons } from "../Header/HeaderStyles";
 import {
   CompanyContainer,
   FooterWrapper,
@@ -20,7 +20,7 @@ const Footer = () => {
       <LinkList>
         <LinkColumn>
           <LinkTitle>Email</LinkTitle>
-          <LinkItem href="mailto:arifa.elyes@gmail.com ">arifa.elyes@gmail.com</LinkItem>
+          <LinkItem href="mailto:arifa.elyes@gmail.com">arifa.elyes@gmail.com</LinkItem>
         </LinkColumn>
       </LinkList>
       <SocialIconsContainer>
@@ -28,14 +28,11 @@ const Footer = () => {
           <Slogan>Innovating one project at a time</Slogan>
         </CompanyContainer>
         <SocialContainer>
-          <SocialIcons href="https://github.com/elyessAR">
-            <AiFillGithub size="3rem" />
+          <SocialIcons href="https://github.com/elyessAR" target="_blank" rel="noopener noreferrer">
+            <AiFillGithub size="2.4rem" />
           </SocialIcons>
-          <SocialIcons href="https://www.linkedin.com/in/elyes-arifa-9142b9179/">
-            <AiFillLinkedin size="3rem" />
-          </SocialIcons>
-          <SocialIcons href="https://google.com">
-            <AiFillInstagram size="3rem" />
+          <SocialIcons href="https://www.linkedin.com/in/elyes-arifa-9142b9179/" target="_blank" rel="noopener noreferrer">
+            <AiFillLinkedin size="2.4rem" />
           </SocialIcons>
         </SocialContainer>
       </SocialIconsContainer>

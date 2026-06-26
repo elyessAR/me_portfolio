@@ -1,5 +1,12 @@
-const withImages = require('next-images');
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'export',
+  compiler: {
+    styledComponents: true,
+  },
+  images: {
+    unoptimized: true,
+  },
+};
 
-module.exports = withImages({
-  // Other Next.js configurations can go here if needed
-});
+module.exports = nextConfig;

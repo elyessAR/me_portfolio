@@ -1,78 +1,132 @@
+import Link from 'next/link';
 import { IoIosArrowDropdown } from 'react-icons/io';
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.header`
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 2rem;
-  padding: 1rem;
-  padding-top: 2rem;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  margin: 0 auto 1rem;
+  max-width: 1100px;
+  background: rgba(8, 8, 15, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid ${(props) => props.theme.colors.border};
+  border-radius: 16px;
 
   @media ${(props) => props.theme.breakpoints.sm} {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, 60px);
-    grid-column-gap: 0.5rem;
-    grid-row-gap: 0.5rem;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    gap: 0.8rem;
+    padding: 1rem 1.2rem;
+    border-radius: 12px;
   }
 `;
+
 export const Div1 = styled.div`
-  grid-area: 1 / 1 / 2 / 2;
   display: flex;
   flex-direction: row;
-  align-content: center;
-  @media ${(props) => props.theme.breakpoints.sm} {
-    grid-area: 1 / 1 / 2 / 3;
-  }
-`;
-
-export const Div2 = styled.div`
-  grid-area: 1 / 2 / 2 / 4;
-  display: flex;
-  justify-content: space-around;
-  @media ${(props) => props.theme.breakpoints.sm} {
-    grid-area: 2 / 2 / 3 / 5;
-  }
-`;
-export const Div3 = styled.div`
-  grid-area: 1 / 5 / 2 / 6;
-  display: flex;
-  justify-content: space-around;
   align-items: center;
+  gap: 0.8rem;
+
   @media ${(props) => props.theme.breakpoints.sm} {
-    align-items: center;
-    grid-area: 1 / 4 / 2 / 6;
+    grid-area: 1 / 1;
   }
 `;
-export const Span = styled.span`
-  font-size: 2rem;
+
+export const Div2 = styled.nav`
+  display: flex;
+  justify-content: center;
+  gap: 2.4rem;
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    grid-area: 2 / 1 / 3 / 3;
+    justify-content: center;
+    gap: 1.6rem;
+  }
 `;
 
-// Navigation Links
-export const NavLink = styled.a`
-  font-size: 2rem;
-  line-height: 32px;
-  color: rgba(255, 255, 255, 0.75);
-  transition: 0.4s ease;
+export const Div3 = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.4rem;
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    grid-area: 1 / 2;
+  }
+`;
+
+export const LogoIcon = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: ${(props) => props.theme.colors.gradient};
+  color: white;
+  font-size: 1.8rem;
+`;
+
+export const Span = styled.span`
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  background: ${(props) => props.theme.colors.gradient};
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+`;
+
+export const LogoLink = styled(Link)`
+  display: flex;
+  align-items: center;
+`;
+
+export const NavLink = styled(Link)`
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.55);
+  transition: color 0.2s ease;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: ${(props) => props.theme.colors.gradient};
+    border-radius: 1px;
+    transition: width 0.3s ease;
+  }
+
   &:hover {
     color: #fff;
-    opacity: 1;
     cursor: pointer;
+
+    &::after {
+      width: 100%;
+    }
   }
+
   @media ${(props) => props.theme.breakpoints.sm} {
-    padding: 0.5rem;
+    font-size: 1.4rem;
   }
 `;
 
-/// DropDown Contact
 export const ContactDropDown = styled.button`
   border: none;
   display: flex;
   position: relative;
   background: none;
   font-size: 1.7rem;
-
   line-height: 32px;
   color: rgba(255, 255, 255, 0.75);
   cursor: pointer;
@@ -83,13 +137,6 @@ export const ContactDropDown = styled.button`
   }
   &:hover {
     color: #fff;
-  }
-
-  @media ${(props) => props.theme.breakpoints.sm} {
-    padding: 0.4rem 0;
-  }
-  @media ${(props) => props.theme.breakpoints.md} {
-    padding: 0;
   }
 `;
 
@@ -104,23 +151,20 @@ export const NavProductsIcon = styled(IoIosArrowDropdown)`
   &:hover {
     opacity: 1;
   }
-
-  @media ${(props) => props.theme.breakpoints.sm} {
-    margin: 2px 0 0 2px;
-    width: 15px;
-  }
 `;
 
-// Social Icons
-
 export const SocialIcons = styled.a`
-  transition: 0.3s ease;
-  color: white;
-  border-radius: 50px;
+  transition: all 0.25s ease;
+  color: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
   padding: 8px;
+  display: flex;
+  align-items: center;
+
   &:hover {
-    background-color: #212d45;
-    transform: scale(1.2);
+    color: #fff;
+    background: ${(props) => props.theme.colors.surface};
+    transform: translateY(-2px);
     cursor: pointer;
   }
 `;

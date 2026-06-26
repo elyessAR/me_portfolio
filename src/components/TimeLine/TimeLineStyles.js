@@ -1,23 +1,15 @@
 import styled from "styled-components";
 
 export const CarouselContainer = styled.ul`
-  max-width: 1040px;
-  background: #390c0c;
-  padding: 0rem;
+  max-width: 100%;
+  padding: 0;
   list-style: none;
   display: flex;
   justify-content: space-between;
-  /* overflow-x: hidden; */
-
-  margin-left: 32px;
-  &:first-of-type {
-    margin-left: 0px;
-  }
-
-  margin-bottom: 80px;
-
-  //remove scrollbar
+  gap: 2rem;
+  margin-bottom: 4rem;
   scrollbar-width: none;
+
   &::-webkit-scrollbar {
     display: none;
   }
@@ -29,96 +21,87 @@ export const CarouselContainer = styled.ul`
     touch-action: pan-x;
     justify-content: initial;
     margin-bottom: 8px;
+    gap: 0;
   }
 `;
+
 export const CarouselMobileScrollNode = styled.div`
   @media ${(props) => props.theme.breakpoints.sm} {
     display: flex;
-    min-width: ${({ final }) => (final ? `120%;` : `min-content`)};
+    min-width: ${({ final }) => (final ? `120%` : `min-content`)};
   }
 `;
 
 export const CarouselItem = styled.div`
-  background: #390c0c;
-  border-radius: 3px;
-  max-width: 196px;
+  flex: 1;
+  padding: 2rem;
+  border-radius: 16px;
+  background: ${(props) => props.theme.colors.surface};
+  border: 1px solid ${(props) => props.theme.colors.border};
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 
-  @media ${(props) => props.theme.breakpoints.md} {
-    max-width: 124px;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: ${(props) => props.theme.colors.gradient};
+    border-radius: 4px 0 0 4px;
+  }
+
+  &:hover {
+    border-color: rgba(6, 182, 212, 0.25);
+    transform: translateY(-2px);
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {
-    margin-left: 32px;
-    min-width: 120px;
-    background: #0e131f;
-    padding: 4px;
-    align-content: start;
+    margin-left: 16px;
+    min-width: 240px;
     scroll-snap-align: start;
-    border-radius: 3px;
-    overflow: visible;
-    position: relative;
-    height: fit-content;
-
-    ${(props) => (props.active === props.index ? `opacity: 1` : `opacity: 0.5`)};
+    opacity: ${(props) => (props.active === props.index ? `1` : `0.6`)};
   }
 `;
 
 export const CarouselItemTitle = styled.h4`
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 32px;
-  letter-spacing: 0.02em;
-  display: flex;
-  /* This gradient is different due to the size of the Title container, it must transition sooner to be visible on the text */
-  background: linear-gradient(121.57deg, #ffffff 10%, rgba(255, 255, 255, 0.66) 30.15%);
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  background: ${(props) => props.theme.colors.gradient};
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 8px;
+  background-clip: text;
+  margin-bottom: 12px;
 
   @media ${(props) => props.theme.breakpoints.md} {
-    font-size: 20px;
-    line-height: 28px;
-    margin-bottom: 4px;
+    font-size: 2rem;
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1.8rem;
   }
 `;
-export const CarouselItemImg = styled.svg`
-  margin-left: 21px;
-  -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-  width: 100%;
 
-  @media ${(props) => props.theme.breakpoints.sm} {
-    -webkit-mask-image: none;
-    margin-left: 16px;
-    overflow: visible;
-  }
+export const CarouselItemImg = styled.svg`
+  display: none;
 `;
 
 export const CarouselItemText = styled.p`
-  font-size: 14px;
-  line-height: 22px;
-  letter-spacing: 0.02em;
-  color: rgba(255, 255, 255, 0.75);
-  padding-right: 16px;
+  font-size: 1.4rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.55);
 
-  @media ${(props) => props.theme.breakpoints.md} {
-    font-size: 12px;
-    line-height: 18px;
-    padding-right: 32px;
-  }
   @media ${(props) => props.theme.breakpoints.sm} {
-    font-size: 10px;
-    line-height: 16px;
-    padding-right: 0;
+    font-size: 1.3rem;
   }
 `;
+
 export const CarouselButtons = styled.div`
   width: 288px;
-
   display: none;
   visibility: hidden;
 
@@ -126,6 +109,7 @@ export const CarouselButtons = styled.div`
     display: flex;
     visibility: visible;
     margin-bottom: 48px;
+    gap: 8px;
   }
 `;
 
@@ -135,9 +119,9 @@ export const CarouselButton = styled.button`
   padding: 4px;
   border: none;
   cursor: pointer;
-  margin-right: 4px;
   opacity: ${(props) => (props.active === props.index ? `1` : `.33`)};
-  transform: ${(props) => (props.active === props.index ? `scale(1.6)` : `scale(1)`)};
+  transform: ${(props) => (props.active === props.index ? `scale(1.4)` : `scale(1)`)};
+  transition: all 0.2s ease;
 
   &:focus {
     outline: none;
@@ -145,9 +129,9 @@ export const CarouselButton = styled.button`
 `;
 
 export const CarouselButtonDot = styled.div`
-  background-color: white;
+  background: ${(props) => props.theme.colors.gradient};
   border-radius: 10px;
   margin: auto;
-  width: 3px;
-  height: 3px;
+  width: 8px;
+  height: 8px;
 `;

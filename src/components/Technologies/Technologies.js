@@ -1,42 +1,46 @@
 import React from 'react';
 import { DiFirebase, DiReact, DiZend } from 'react-icons/di';
 import { Section, SectionDivider, SectionText, SectionTitle } from '../../styles/GlobalComponents';
-import { List, ListContainer, ListItem, ListParagraph, ListTitle } from './TechnologiesStyles';
+import { List, ListContainer, ListItem, ListParagraph, ListTitle, IconWrapper } from './TechnologiesStyles';
 
 const Technologies = () => (
   <Section id="tech">
     <SectionDivider />
-    <br />
     <SectionTitle>Technologies</SectionTitle>
-    <SectionText>I've worked with a range of technologies in the web developement world. From back-end to Design</SectionText>
+    <SectionText>
+      I've worked with a range of technologies in the web development world — from back-end to design.
+    </SectionText>
     <List>
       <ListItem>
-        <DiReact size="3rem" />
+        <IconWrapper>
+          <DiReact size="2.8rem" />
+        </IconWrapper>
         <ListContainer>
           <ListTitle>Front-End</ListTitle>
           <ListParagraph>
-            Experience with <br />
-            React js and Angular
+            Experience with React.js and Angular, building responsive and performant user interfaces.
           </ListParagraph>
         </ListContainer>
       </ListItem>
       <ListItem>
-        <DiFirebase size="3rem" />
+        <IconWrapper>
+          <DiFirebase size="2.8rem" />
+        </IconWrapper>
         <ListContainer>
           <ListTitle>Back-End</ListTitle>
           <ListParagraph>
-            Experience with <br />
-            Spring, Node and Express js{' '}
+            Experience with Spring, Node.js and Express.js for robust API development.
           </ListParagraph>
         </ListContainer>
       </ListItem>
       <ListItem>
-        <DiZend size="3rem" />
+        <IconWrapper>
+          <DiZend size="2.8rem" />
+        </IconWrapper>
         <ListContainer>
           <ListTitle>UI/UX</ListTitle>
           <ListParagraph>
-            Experience with <br />
-            tools like figma
+            Experience with design tools like Figma for crafting intuitive user experiences.
           </ListParagraph>
         </ListContainer>
       </ListItem>

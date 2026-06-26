@@ -12,6 +12,7 @@ import {
   TitleContent,
   UtilityList,
   Img,
+  StackLabel,
 } from "./ProjectsStyles";
 import { Section, SectionDivider, SectionTitle } from "../../styles/GlobalComponents";
 import { projects } from "../../constants/constants";
@@ -21,30 +22,26 @@ const Projects = () => (
     <SectionDivider />
     <SectionTitle main>Personal Projects</SectionTitle>
     <GridContainer>
-      {projects.map((p, i) => {
-        return (
-          <BlogCard key={i}>
-            <Img src={p.image} />
-            <TitleContent>
-              <HeaderThree title>{p.title}</HeaderThree>
-              <Hr />
-            </TitleContent>
-            <CardInfo className="card-info">{p.description}</CardInfo>
-            <div>
-              <TitleContent>Stack</TitleContent>
-              <TagList>
-                {p.tags.map((t, i) => {
-                  return <Tag key={i}>{t}</Tag>;
-                })}
-              </TagList>
-            </div>
-            <UtilityList>
-              <ExternalLinks href={p.visit}>Demo</ExternalLinks>
-              <ExternalLinks href={p.source}>Source</ExternalLinks>
-            </UtilityList>
-          </BlogCard>
-        );
-      })}
+      {projects.map((p, i) => (
+        <BlogCard key={i}>
+          <Img src={p.image} alt={p.title} />
+          <TitleContent>
+            <HeaderThree $title>{p.title}</HeaderThree>
+            <Hr />
+          </TitleContent>
+          <CardInfo>{p.description}</CardInfo>
+          <StackLabel>Stack</StackLabel>
+          <TagList>
+            {p.tags.map((t, j) => (
+              <Tag key={j}>{t}</Tag>
+            ))}
+          </TagList>
+          <UtilityList>
+            <ExternalLinks href={p.visit} target="_blank" rel="noopener noreferrer">Demo</ExternalLinks>
+            <ExternalLinks href={p.source} target="_blank" rel="noopener noreferrer" $secondary>Source</ExternalLinks>
+          </UtilityList>
+        </BlogCard>
+      ))}
     </GridContainer>
   </Section>
 );
